@@ -1,7 +1,7 @@
 export default function Backlog() {
     return (
         <div>
-            <p>Backlog page</p>
+            <p>Game page</p>
         </div>
     );
 }
