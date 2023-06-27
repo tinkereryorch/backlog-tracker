@@ -1,4 +1,4 @@
-export default function Backlog() {
+export default function Game() {
     return (
         <div>
             <p>Game page</p>
