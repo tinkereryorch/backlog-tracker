@@ -3,8 +3,8 @@ import GameTitle from "./components/GameTitle";
 
 export default function Game() {
     return (
-        <div>
-            <GameTitle title="Game Title" />
+        <div className="container">
+            <GameTitle title="MyGame" />
             <GameDetails />
         </div>
     );
