@@ -24,6 +24,7 @@ export default function GameDetails() {
                 <label for="guide">Guide: </label>
                 <input type="text" id="guide" name="guide" style={{ color: 'black' }} />
             </div>
+            <input type="Submit" value="Save"/>
         </form>
     );
 }
