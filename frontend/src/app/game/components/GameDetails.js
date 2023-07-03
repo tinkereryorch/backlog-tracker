@@ -9,9 +9,6 @@ export default function GameDetails() {
     }
 
     function handleSave(event) {
-
-        console.log(data);
-
         const formData = new FormData(event.target.form);
         const status = formData.get('game_status');
         const startDate = formData.get('start_date');
@@ -25,6 +22,10 @@ export default function GameDetails() {
 
         data.push(objectData);
         console.log(data);
+    }
+
+    function handleCancel() {
+        console.log('Cancelling add game...');
     }
 
     return (
@@ -57,6 +58,7 @@ export default function GameDetails() {
                 <input type="text" id="guide" name="guide" style={{ color: 'black' }} />
             </div>
             <button type="submit" onClick={handleSave}>Save</button>
+            <button type="submit" onClick={handleCancel}>Cancel</button>
         </form>
     );
 }
