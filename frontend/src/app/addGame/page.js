@@ -1,9 +1,9 @@
-import GameDetails from "./components/GameDetails";
+import AddGameForm from "./components/AddGameForm";
 
 export default function Game() {
     return (
         <div className="container">
-            <GameDetails />
+            <AddGameForm />
         </div>
     );
 }
