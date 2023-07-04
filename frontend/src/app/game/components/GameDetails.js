@@ -29,6 +29,8 @@ export default function GameDetails() {
     }
 
     return (
+        <>
+        <h1>Add Game</h1>
         <form onSubmit={handleSubmit} method="post" >
             <div style={{ padding: '10px' }}>
                 <label htmlFor="game_title">Game Title: </label>
@@ -57,8 +59,11 @@ export default function GameDetails() {
                 <label htmlFor="guide">Guide: </label>
                 <input type="text" id="guide" name="guide" style={{ color: 'black' }} />
             </div>
-            <button type="submit" onClick={handleSave}>Save</button>
-            <button type="submit" onClick={handleCancel}>Cancel</button>
+            <div className="add-game-form-buttons">
+                <button type="submit" onClick={handleSave} style={{ margin: '35px'}}>Save</button>
+                <button type="submit" onClick={handleCancel}>Cancel</button>
+            </div>
         </form>
+        </>
     );
 }
