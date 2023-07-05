@@ -30,16 +30,8 @@ form {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  align-items:start;
+  align-items:flex-start;
 }
-
-.add-game-form-buttons {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-
-
 
 .container {
   display: flex;
