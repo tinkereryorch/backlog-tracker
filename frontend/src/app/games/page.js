@@ -1,7 +1,11 @@
+import { data } from "@/data/mockData";
+
 export default function Games() {
     return(
-        <div>
-            <p>List of Games</p>
-        </div>
+        <ul>
+            {data.map((game, index) => (
+                <li key={index}>{game.title}</li>
+            ))}
+        </ul>
     )
 }
