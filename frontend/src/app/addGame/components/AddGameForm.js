@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { data } from "@/data/mockData";
 
 export default function AddGameForm() {
@@ -22,10 +23,6 @@ export default function AddGameForm() {
 
         data.push(objectData);
         console.log(data);
-    }
-
-    function handleCancel() {
-        console.log('Cancelling add game...');
     }
 
     return (
@@ -59,10 +56,8 @@ export default function AddGameForm() {
                 <label htmlFor="guide">Guide: </label>
                 <input type="text" id="guide" name="guide" style={{ color: 'black' }} />
             </div>
-            <div className="add-game-form-buttons">
-                <button type="submit" onClick={handleSave} style={{ margin: '35px'}}>Save</button>
-                <button type="submit" onClick={handleCancel}>Cancel</button>
-            </div>
+            <button type="submit" onClick={handleSave} style={{ margin: '35px'}}>Save</button>
+            <Link href="/games" passHref><button>Cancel</button></Link>
         </form>
         </>
     );
