@@ -6,6 +6,15 @@ export const data = [
         startDate: new Date().getTime(),
         timeSpent: 2,
         notes: 'Notes about Tomb Raider',
-        guide: 'Tomb Raider Guide URL'
+        rating: 4
     },
+    {
+        id: 1,
+        title: 'Uncharted 2',
+        status: 'In Progress',
+        startDate: new Date().getTime(),
+        timeSpent: 5,
+        notes: 'Notes about Uncharted 2',
+        rating: 5
+    }
 ]
