@@ -1,4 +1,5 @@
 import { data } from "@/data/mockData";
+import Link from "next/link";
 
 export default function Games() {
     return (
@@ -12,8 +13,8 @@ export default function Games() {
                             <span>Status: {game.status}</span>
                             <span>Hours Spent: {game.timeSpent}</span>
                             {game.rating && <span>Rating: {game.rating}</span>}
-                            <button>👁️‍🗨️</button>
-                            <button>✖️</button>            
+                            <Link href={`/game/${game.id}`}><button>View</button></Link>
+                            <button>Delete</button>            
                         </div>
                         <hr></hr>
                     </li>
@@ -23,3 +24,4 @@ export default function Games() {
         </>
     )
 }
+
