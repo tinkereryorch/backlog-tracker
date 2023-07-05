@@ -52,10 +52,6 @@ export default function AddGameForm() {
                 <label htmlFor="notes">Notes: </label>
                 <input type="text" id="notes" name="notes" style={{ color: 'black' }} />
             </div>
-            <div style={{ padding: '10px' }}>
-                <label htmlFor="guide">Guide: </label>
-                <input type="text" id="guide" name="guide" style={{ color: 'black' }} />
-            </div>
             <button type="submit" onClick={handleSave} style={{ margin: '35px'}}>Save</button>
             <Link href="/games" passHref><button>Cancel</button></Link>
         </form>
