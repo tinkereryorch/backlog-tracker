@@ -5,6 +5,7 @@ export default function Games() {
     return (
         <>
             <h1>My Games</h1>
+            <Link href="/addGame"><button>+ Add Game</button></Link>
             <ul>
                 {data.map((game) => (
                     <li key={game.id}>
