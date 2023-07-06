@@ -2,6 +2,11 @@ import { data } from "@/data/mockData";
 import Link from "next/link";
 
 export default function Games() {
+
+    function handleDelete() {
+        // to be implemented
+    }
+
     return (
         <>
             <h1>My Games</h1>
@@ -15,7 +20,7 @@ export default function Games() {
                             <span>Hours Spent: {game.timeSpent}</span>
                             {game.rating && <span>Rating: {game.rating}</span>}
                             <Link href={`/game/${game.id}`}><button>View</button></Link>
-                            <button>Delete</button>            
+                            <button onClick={handleDelete}>Delete</button>            
                         </div>
                         <hr></hr>
                     </li>
