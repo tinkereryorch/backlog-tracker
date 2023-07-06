@@ -1,3 +1,5 @@
+'use client';
+
 import { data } from "@/data/mockData";
 import Link from "next/link";
 
@@ -9,7 +11,7 @@ export default function Games() {
 
     return (
         <>
-            <h1>My Games</h1>
+            <h1 className="text-3xl font-bold text-center">My Games</h1>
             <Link href="/addGame"><button>+ Add Game</button></Link>
             <ul>
                 {data.map((game) => (
