@@ -11,9 +11,9 @@ export default function Games() {
 
     return (
         <>
-            <h1 className="text-3xl font-bold text-center">My Games</h1>
-            <Link href="/addGame"><button>+ Add Game</button></Link>
-            <ul>
+            <h1 className="text-3xl font-bold text-center text-white space-y-4">My Games</h1>
+            <Link href="/addGame"><button className="btn btn-outline btn-primary">+ Add Game</button></Link>
+            <ul  className="text-white">
                 {data.map((game) => (
                     <li key={game.id}>
                         <div>
