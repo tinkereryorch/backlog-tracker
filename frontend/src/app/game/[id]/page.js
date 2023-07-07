@@ -7,7 +7,7 @@ export default function Game({ params }) {
 
     return(
         <div>
-            <h1>Edit/View Game</h1>
+            <h1 className="text-lg">Edit/View Game</h1>
             <br>
             </br>
             <p>Game Title: {game.title}</p>
