@@ -3,18 +3,26 @@ import { data } from "@/data/mockData";
 
 export default function Game({ params }) {
     let game = data[params.id];
-    let date = game.startDate;
+    const propertiesToShow = ['title', 'status', 'startDate', 'timeSpent', 'notes', 'platform', 'rating'];
+    
+    const filteredProperties = Object.entries(game).filter(([key, value]) => 
+        propertiesToShow.includes(key) && value !== null
+    );
 
-    return(
+    const gameItems = filteredProperties.map(([key, value]) => (
+        <li key={key}>
+            {key}: {value}
+        </li>
+    ));
+
+    return (
         <div>
-            <h1 className="text-lg">Edit/View Game</h1>
+            <h1 className="text-3xl font-bold text-center text-white mt-6">Game Details</h1>
             <br>
             </br>
-            <p>Game Title: {game.title}</p>
-            <p>Status: {game.status}</p>
-            <p>Start Date: {date}</p>
-            <p>Time Spent in Hours: {game.timeSpent}</p>
-            {game.rating && <p>Rating: {game.rating}</p>}
+            <ul>
+                {gameItems}
+            </ul>
             <Link href="/games"><button>Back</button></Link>
         </div>
     )
