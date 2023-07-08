@@ -11,24 +11,43 @@ export default function Games() {
 
     return (
         <>
-            <h1 className="text-3xl font-bold text-center text-white space-y-4">My Games</h1>
-            <Link href="/addGame"><button className="btn btn-outline btn-primary">+ Add Game</button></Link>
-            <ul  className="text-white">
-                {data.map((game) => (
-                    <li key={game.id}>
-                        <div>
-                            <span>Game: {game.title}</span>
-                            <span>Status: {game.status}</span>
-                            <span>Hours Spent: {game.timeSpent}</span>
-                            {game.rating && <span>Rating: {game.rating}</span>}
-                            <Link href={`/game/${game.id}`}><button>View</button></Link>
-                            <button onClick={handleDelete}>Delete</button>            
-                        </div>
-                        <hr></hr>
-                    </li>
-                    
-                ))}
-            </ul>
+            <h1 className="text-3xl font-bold text-center text-white mt-6">My Games</h1>
+            <div className="w-full flex justify-end">
+                <Link href="/addGame">
+                    <button className="btn btn-sm btn-info ml-auto mr-10 mt-6">+ Add Game</button>
+                </Link>
+            </div>
+            <table className="table table-auto w-9/12 mt-6 ml-10 text-lg">
+                <thead className="text-lg text-white">
+                    <tr>
+                        <th>
+                            Game
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Hours Spent
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map((game) => (
+                        <tr key={game.id} className="hover:bg-teal-700">
+
+                            <td>{game.title}</td>
+                            <td>{game.status}</td>
+                            <td >{game.timeSpent}</td>
+                            <td>
+                                <Link href={`/game/${game.id}`}><button className="font-bold">View</button></Link>
+                            </td>
+                            <td>
+                                <button className="font-bold" onClick={handleDelete}>Delete</button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </>
     )
 }
