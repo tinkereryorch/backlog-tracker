@@ -6,7 +6,7 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   daisyui: {
-    themes: ["synthwave", "night"]
+    themes: ["synthwave", "night", "dracula"]
   },
   plugins: [require("daisyui")],
 }
