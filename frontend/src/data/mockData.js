@@ -6,6 +6,7 @@ export const data = [
         startDate: new Date().toString(),
         timeSpent: 2,
         notes: 'Notes about Tomb Raider',
+        platform: 'PS1',
         rating: null,
     },
     {
@@ -15,6 +16,7 @@ export const data = [
         startDate: new Date().toString(),
         timeSpent: 5,
         notes: 'Notes about Uncharted 2',
+        platform: 'PS3',
         rating: null
     },
     {
@@ -23,7 +25,8 @@ export const data = [
         status: 'Finished',
         startDate: new Date().toString(),
         timeSpent: 7,
-        notes: 'Notes about Uncharted 2',
+        notes: 'Notes about Mario',
+        platform: 'Switch',
         rating: 5
     }
 ]
