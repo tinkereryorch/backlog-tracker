@@ -1,6 +1,6 @@
 import AddGameForm from "./components/AddGameForm";
 
-export default function Game() {
+export default function AddGame() {
     return (
         <div className="container font-sans">
             <AddGameForm />
