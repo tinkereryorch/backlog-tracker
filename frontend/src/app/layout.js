@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html data-theme="synthwave" lang="en">
+    <html data-theme="dracula" lang="en">
       <body>{children}</body>
     </html>
   )
