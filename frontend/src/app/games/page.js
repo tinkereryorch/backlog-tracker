@@ -29,15 +29,19 @@ export default function Games() {
                         <th>
                             Hours Spent
                         </th>
+                        <th>
+                            Platform
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
                     {data.map((game) => (
-                        <tr key={game.id} className="hover:bg-teal-700">
+                        <tr key={game.id} className="hover:bg-violet-500">
 
                             <td>{game.title}</td>
                             <td>{game.status}</td>
-                            <td >{game.timeSpent}</td>
+                            <td>{game.timeSpent}</td>
+                            <td>{game.platform}</td>
                             <td>
                                 <Link href={`/game/${game.id}`}><button className="font-bold">View</button></Link>
                             </td>
