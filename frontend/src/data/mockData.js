@@ -8,25 +8,34 @@ export const data = [
         notes: 'Notes about Tomb Raider',
         platform: 'PS1',
         rating: null,
+        image: 'image-path',
+        owned: 'yes',
+        provider: 'Steam'
     },
     {
         id: 1,
-        title: 'Uncharted 2',
+        title: 'Blasphemous',
         status: 'In Progress',
         startDate: new Date().toString(),
         timeSpent: 5,
-        notes: 'Notes about Uncharted 2',
+        notes: 'Blasphemous',
         platform: 'PS3',
-        rating: null
+        rating: null,
+        image: 'image-path',
+        owned: 'no',
+        provider: 'GOG'
     },
     {
         id: 2,
-        title: 'Mario Galaxy',
+        title: 'Diablo IV',
         status: 'Finished',
         startDate: new Date().toString(),
         timeSpent: 7,
-        notes: 'Notes about Mario',
-        platform: 'Switch',
-        rating: 5
+        notes: 'Notes about Diablo IV',
+        platform: 'PC',
+        rating: 5,
+        image: 'image-path',
+        owned: 'shared',
+        provider: 'Blizzard Store'
     }
 ]
